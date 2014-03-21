@@ -26,15 +26,24 @@ class WebsitesController < ApplicationController
   def create
     @website = Website.new(website_params)
 
-    respond_to do |format|
-      if @website.save
-        format.html { redirect_to @website, notice: 'Website was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @website }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @website.errors, status: :unprocessable_entity }
+    if @website.save
+      redirect_to :action => "index"
+    else
+      respond_to do |format|
+            format.html { render action: 'new' }
+            format.json { render json: @website.errors, status: :unprocessable_entity }
       end
     end
+    # respond_to do |format|
+    #   if @website.save
+    #     # format.html { redirect_to @website, notice: 'Website was successfully created.' }
+    #     # format.json { render action: 'show', status: :created, location: @website }
+    #     redirect_to :action => "index"
+    #   else
+    #     format.html { render action: 'new' }
+    #     format.json { render json: @website.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /websites/1
