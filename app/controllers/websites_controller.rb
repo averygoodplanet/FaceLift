@@ -34,16 +34,6 @@ class WebsitesController < ApplicationController
             format.json { render json: @website.errors, status: :unprocessable_entity }
       end
     end
-    # respond_to do |format|
-    #   if @website.save
-    #     # format.html { redirect_to @website, notice: 'Website was successfully created.' }
-    #     # format.json { render action: 'show', status: :created, location: @website }
-    #     redirect_to :action => "index"
-    #   else
-    #     format.html { render action: 'new' }
-    #     format.json { render json: @website.errors, status: :unprocessable_entity }
-    #   end
-    # end
   end
 
   # PATCH/PUT /websites/1
