@@ -5,6 +5,10 @@ gem 'rails', '4.0.3'
 
 gem 'pg'
 
+gem 'carrierwave'
+
+gem 'cloudinary', '~> 1.0.59'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
