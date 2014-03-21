@@ -21,7 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :before_image %><br>
-    <%= f.text_field :before_image %>
+    <%= f.file_field :before_image %>
+    <%= f.hidden_field(:before_image_cache)%>
   </div>
   <div class="field">
     <%= f.label :after_image %><br>
@@ -30,4 +31,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+  <%= hidden_field_tag :direct, params[:direct] %>
 <% end %>
