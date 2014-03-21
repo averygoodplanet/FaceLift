@@ -26,7 +26,8 @@
   </div>
   <div class="field">
     <%= f.label :after_image %><br>
-    <%= f.text_field :after_image %>
+    <%= f.file_field :after_image %>
+    <%= f.hidden_field(:after_image_cache)%>
   </div>
   <div class="actions">
     <%= f.submit %>
