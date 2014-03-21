@@ -9,6 +9,8 @@ gem 'carrierwave'
 
 gem 'cloudinary', '~> 1.0.59'
 
+gem 'protected_attributes'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
