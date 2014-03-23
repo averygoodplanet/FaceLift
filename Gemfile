@@ -38,7 +38,7 @@ group :doc do
 end
 
 gem 'foundation-rails'
-
+gem 'haml', '~> 4.0.5'
 gem 'rails_12factor', group: :production
 ruby "2.0.0"
 # Use ActiveModel has_secure_password
