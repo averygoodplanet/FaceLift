@@ -1,3 +1,21 @@
 // Place all the styles related to the websites controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html
+{
+  body
+  {
+    background: grey;
+
+    .row
+    {
+      background: white;
+    }
+
+    .website_box
+    {
+      border: 1px solid black;
+      border-radius: 13px;
+    }
+  }
+}

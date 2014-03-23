@@ -1,18 +1,12 @@
 
 .row
   .small-12.columns
-    %table
-      %tbody
+    %ul.small-block-grid-3
       - @websites.each do |website|
-        %tr
-          %td= website.title
-          %td= website.description
-          %td
-            %a{:href => "= website.before_image.url", :target => "_blank"}= image_tag(website.before_image.thumbnail.url, :class=> "thumbnail inline")
-          %td
-            %a{:href => "= website.after_image.url", :target => "_blank"}= image_tag(website.after_image.thumbnail.url, :class=> "thumbnail inline")
-          %td= link_to 'Show', website
-          %td= link_to 'Edit', edit_website_path(website)
-          %td= link_to 'Destroy', website, method: :delete, data: {confirm: 'Are you sure?'}
+        %li
+          .website_box
+            %h3.text-center= website.title
+.row
+  .small-12.columns
     %br
-    = link_to 'New Website', new_website_path
+      = link_to 'New Website', new_website_path
