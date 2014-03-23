@@ -16,6 +16,13 @@ html
     {
       border: 1px solid black;
       border-radius: 13px;
+      overflow: hidden;
+      text-align: center;
+
+      .example_image
+      {
+        width: 100%;
+      }
     }
   }
 }

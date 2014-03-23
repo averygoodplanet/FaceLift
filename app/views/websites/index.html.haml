@@ -1,11 +1,16 @@
-
+.row
+  .small-12.columns
+    %br
 .row
   .small-12.columns
     %ul.small-block-grid-3
       - @websites.each do |website|
         %li
           .website_box
-            %h3.text-center= website.title
+            %a{:href => "= website.after_image.url", :target => "_blank"}= image_tag(website.after_image.thumbnail.url, :type => "fetch", :width => 314, :height => 130, :crop => :fill, :gravity => :north, :class=> "example_image")
+            %h3= website.title
+            %p= website.description
+            %a= link_to 'Destroy', website, method: :delete, data: {confirm: 'Are you sure?'}
 .row
   .small-12.columns
     %br
