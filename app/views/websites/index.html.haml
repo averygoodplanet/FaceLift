@@ -12,10 +12,15 @@
             %p= website.description
             %a.button.tiny.radius{"data-reveal-id" => "#{website.title.gsub(/\s+/, "")}Modal", :href => "#", "data-reveal" => true} See Before and After
             %a= link_to 'Destroy', website, method: :delete, data: {confirm: 'Are you sure?'}, :class => "button radius tiny alert"
-            %div{:id => "#{website.title.gsub(/\s+/, "")}Modal", :class => "reveal-modal", "data-reveal" => ""}
+            %div{:id => "#{website.title.gsub(/\s+/, "")}Modal", :class => "reveal-modal xlarge", "data-reveal" => ""}
               %h2.text-centered Before and After Comparison of #{website.title}
-              %a{:href => "= website.before_image.url", :target => "_blank"}= image_tag(website.before_image.thumbnail.url, :type => "fetch", :width => 450, :height => 490, :class => "before_image")
-              %a{:href => "= website.after_image.url", :target => "_blank"}= image_tag(website.after_image.thumbnail.url, :class => "after_image")
+              .row
+                .small-12.columns
+                  %ul.small-block-grid-2
+                    %li
+                      %a{:href => "= website.before_image.url", :target => "_blank"}= image_tag(website.before_image.url, :class => "before_image")
+                    %li
+                      %a{:href => "= website.after_image.url", :target => "_blank"}= image_tag(website.after_image.url, :class => "after_image")
               %a.close-reveal-modal &#215;
 .row
   .small-12.columns
