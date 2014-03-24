@@ -10,7 +10,8 @@
             %a{:href => "= website.after_image.url", :target => "_blank"}= image_tag(website.after_image.thumbnail.url, :type => "fetch", :width => 314, :height => 130, :crop => :fill, :gravity => :north, :class=> "example_image")
             %h3= website.title
             %p= website.description
-            %a= link_to 'Destroy', website, method: :delete, data: {confirm: 'Are you sure?'}
+            %a.button.tiny.radius See Before and After
+            %a= link_to 'Destroy', website, method: :delete, data: {confirm: 'Are you sure?'}, :class => "button radius tiny alert"
 .row
   .small-12.columns
     %br
