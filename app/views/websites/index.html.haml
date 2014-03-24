@@ -7,7 +7,7 @@
       - @websites.each do |website|
         %li
           .website_box
-            %a{:href => "= website.after_image.url", :target => "_blank"}= image_tag(website.after_image.url, :type => "fetch", :width => 314, :height => 130, :crop => :fill, :gravity => :north, :class=> "example_image")
+            %a= image_tag(website.after_image.url, :type => "fetch", :width => 314, :height => 130, :crop => :fill, :gravity => :north, :class=> "example_image")
             %h3.subheader= website.title
             %p= website.description
             %a.button.tiny.radius{"data-reveal-id" => "#{website.title.gsub(/\s+/, "")}Modal", :href => "#", "data-reveal" => true} See Before and After
@@ -18,9 +18,9 @@
                 .small-12.columns
                   %ul.small-block-grid-2
                     %li
-                      %a{:href => "= website.before_image.url", :target => "_blank"}= image_tag(website.before_image.url, :class => "before_image")
+                      %a= image_tag(website.before_image.url, :class => "before_image", :style => "cursor: auto")
                     %li
-                      %a{:href => "= website.after_image.url", :target => "_blank"}= image_tag(website.after_image.url, :class => "after_image")
+                      %a= image_tag(website.after_image.url, :class => "after_image", :style => "cursor: auto")
               %a.close-reveal-modal &#215;
 .row
   .small-12.columns
