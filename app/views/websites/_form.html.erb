@@ -20,6 +20,10 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
     <%= f.label :before_image %><br>
     <%= f.file_field :before_image %>
     <%= f.hidden_field(:before_image_cache)%>

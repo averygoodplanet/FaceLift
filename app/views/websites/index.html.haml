@@ -7,7 +7,7 @@
       - @websites.each do |website|
         %li
           .website_box
-            %a= image_tag(website.after_image.url, :type => "fetch", :width => 314, :height => 130, :crop => :fill, :gravity => :north, :class=> "example_image")
+            %a{:href => "http://#{website.url}", :target => "_blank", "data-tooltip" => "", :class => "has-tip", :title => "http://#{website.url}"}= image_tag(website.after_image.url, :type => "fetch", :width => 314, :height => 130, :crop => :fill, :gravity => :north, :class=> "example_image")
             %h3.subheader= website.title
             %p= website.description
             %a.button.tiny.radius{"data-reveal-id" => "#{website.title.gsub(/\s+/, "")}Modal", :href => "#", "data-reveal" => true} See Before and After
