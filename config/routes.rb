@@ -8,6 +8,7 @@ FaceLift::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'websites#index'
 
+  get '/admin' => "websites#admin"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
