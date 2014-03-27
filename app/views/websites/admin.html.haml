@@ -1,3 +1,8 @@
 .row
-  .small-12.columns
-    This is the '/admin' page
+  .small-1.columns
+  .small-11.columns
+    - if user_signed_in?
+      = link_to current_user.email, edit_user_registration_path, class: "button tiny radius authbuttons"
+      = link_to "Log Out", destroy_user_session_path, method: :delete, class: "button tiny radius authbuttons"
+    - else
+      = link_to "Log In", new_user_session_path, class: "button tiny radius authbuttons"
