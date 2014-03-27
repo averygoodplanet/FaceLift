@@ -11,7 +11,8 @@
             %h3.subheader= website.title
             %p= website.description
             %a.button.tiny.radius{"data-reveal-id" => "#{website.title.gsub(/\s+/, "")}Modal", :href => "#", "data-reveal" => true} See Before and After
-            %a= link_to 'Destroy', website, method: :delete, data: {confirm: 'Are you sure?'}, :class => "button radius tiny alert"
+            - if user_signed_in?
+              %a= link_to 'Destroy', website, method: :delete, data: {confirm: 'Are you sure?'}, :class => "button radius tiny alert"
             %div{:id => "#{website.title.gsub(/\s+/, "")}Modal", :class => "reveal-modal xlarge", "data-reveal" => ""}
               %h2.text-centered Before and After Comparison of #{website.title}
               .row
@@ -25,5 +26,6 @@
 .row
   .small-12.columns
     %br
+    - if user_signed_in?
       = link_to 'New Website', new_website_path
 

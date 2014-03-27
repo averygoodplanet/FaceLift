@@ -24,6 +24,8 @@ class WebsitesController < ApplicationController
   # POST /websites
   # POST /websites.json
   def create
+    return unless current_user
+
     @website = Website.new(website_params)
 
     if @website.save
@@ -53,6 +55,8 @@ class WebsitesController < ApplicationController
   # DELETE /websites/1
   # DELETE /websites/1.json
   def destroy
+    return unless current_user
+
     @website.destroy
     respond_to do |format|
       format.html { redirect_to websites_url }
