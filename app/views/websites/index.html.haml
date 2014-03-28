@@ -9,7 +9,7 @@
           .website_box
             %a{:href => "http://#{website.url}", :target => "_blank", "data-tooltip" => "", :class => "has-tip", :title => "http://#{website.url}"}= image_tag(website.after_image.url, :type => "fetch", :width => 314, :height => 130, :crop => :fill, :gravity => :north, :class=> "example_image")
             %h3.subheader= website.title
-            %p= website.description
+            %p.description= website.description
             %a.button.tiny.radius{"data-reveal-id" => "#{website.title.gsub(/\s+/, "")}Modal", :href => "#", "data-reveal" => true} See Before and After
             - if user_signed_in?
               %a= link_to 'Destroy', website, method: :delete, data: {confirm: 'Are you sure?'}, :class => "button radius tiny alert"

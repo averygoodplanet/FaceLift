@@ -24,6 +24,12 @@ html
       overflow: hidden;
       text-align: center;
 
+      .description
+      {
+        text-align: justify;
+        margin: 30px 30px 20px 30px;
+      }
+
       .example_image
       {
         width: 100%;
