@@ -1,11 +1,18 @@
 // Place all the styles related to the websites controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$one: #AC2832;
+$two: #000000;
+$three: #DFD297;
+$four: #FFFFFF;
+
+
 html
 {
   body
   {
-    background: grey;
+    background: $four;
 
     .row
     {
@@ -19,10 +26,14 @@ html
 
     .website_box
     {
-      border: 1px solid black;
+      background: white;
+      border: inset 5px grey;
       border-radius: 13px;
       overflow: hidden;
       text-align: center;
+      -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+      -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+      box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 
       .description
       {
@@ -42,7 +53,7 @@ html
           box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
           -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
           -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-          margin-left: 39px;
+          margin-left: 19px;
           -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
           width: 232px;
           margin-top: 15px;
