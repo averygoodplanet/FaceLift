@@ -27,12 +27,35 @@ html
       .description
       {
         text-align: justify;
-        margin: 30px 30px 20px 30px;
+        margin: 23px 30px 20px 30px;
+        font-size: 12px;
+      }
+
+      h3.title:after
+      {
+          content:' ';
+          display:block;
+          border:2px solid #d0d0d0;
+          border-radius:4px;
+          -webkit-border-radius:4px;
+          -moz-border-radius:4px;
+          box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+          -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+          -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+          margin-left: 39px;
+          -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+          width: 232px;
+          margin-top: 15px;
       }
 
       .example_image
       {
         width: 100%;
+      }
+
+      .title
+      {
+        margin: 20px 15px 0px 15px;
       }
     }
   }
