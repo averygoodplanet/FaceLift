@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url(http://fonts.googleapis.com/css?family=Zeyada);
+
 $one: #AC2832;
 $two: #000000;
 $three: #DFD297;
@@ -13,6 +15,16 @@ html
   body
   {
     background: $four;
+
+    #logo_text
+    {
+      font-family: 'Zeyada', cursive;
+      font-size: 209px;
+      position: absolute;
+      color: white;
+      top: 15px;
+      left: 38px;
+    }
 
     .row
     {
